@@ -10,7 +10,7 @@ CreateThread(function()
             return ESX.ShowNotification(labelText("claimed"), "error")
         end
         local plate = exports["esx_vehicleshop"]:GeneratePlate()
-        local model = type(Config.car?.model) == "number" and Config.car?.model or joaat(Config.car?.model)
+        local model = type(Config.vehicle?.model) == "number" and Config.vehicle?.model or joaat(Config.vehicle?.model)
         if not IsModelInCdimage(model) then
             return
         end
@@ -20,7 +20,7 @@ CreateThread(function()
                 Wait(100)
             end
         end
-        local vehicle = CreateVehicle(model, Config.car?.coords, Config.car?.heading, false, false)
+        local vehicle = CreateVehicle(model, Config.vehicle?.coords, Config.vehicle?.heading, false, false)
         SetVehicleNumberPlateText(vehicle, plate)
         local props = ESX.Game.GetVehicleProperties(vehicle)
         DeleteEntity(vehicle)    

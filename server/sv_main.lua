@@ -1,4 +1,5 @@
-local wh_log = "https://discord.com/api/webhooks/1104708805176066078/rTLaF5OfRPOaPxQV60Np7SeQWpFW26teM0xJRuT88wMeqrUgyd6wpKeC8dP3CF-bGGNf"
+-- CHANGE WEBHOOK BELOW !!!
+local wh_log = ""
 local RequestedConfig = {}
 
 lib.callback.register("starterpack:configRequest", function(source)
@@ -46,7 +47,11 @@ RegisterServerEvent("starterpack:claim", function(data)
         local item = Config.items[i]
         xPlayer.addInventoryItem(item.name, item.count)
     end
-    SendWebhookMessage(wh_log, ("**Vehicle ownership**\n\nDetails\n```\nPlate: %s\nModel: %s\nOld owner: %s\nNew owner: %s\n```"):format(plate, label, "Starter Pack", xPlayer.identifier), nil, "Logs")
+    
+    if Config.log then
+        SendWebhookMessage(wh_log, ("**Vehicle ownership**\n\nDetails\n```\nPlate: %s\nModel: %s\nOld owner: %s\nNew owner: %s\n```"):format(plate, label, "Starter Pack", xPlayer.identifier), nil, "Logs")
+    end
+    
     xPlayer.triggerEvent("esx:showNotification", labelText("success"), "success")
     Wait(1000)
     if GetResourceState('xc_vehlock') == 'started' then

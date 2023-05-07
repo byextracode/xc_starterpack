@@ -40,11 +40,13 @@ Config.items = {
     },
 }
 
-Config.car = {
+Config.vehicle = {
     model = "elegy",
     coords = vec3(-1050.45, -2769.93, 4.64),
     heading = 243.36
 }
+
+Config.log = true
 
 Config.translation = {
     ["en"] = {
