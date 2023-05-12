@@ -3,7 +3,7 @@ lua54 "yes"
 game "gta5"
 
 name "xc_starterpack"
-version "0.1.0"
+version "1.0.0"
 description "ESX starterpack with ox_inventory"
 author "wibowo#7184"
 
