@@ -23,4 +23,5 @@ dependencies {
     "ox_inventory",
     "ox_lib",
     "esx_vehicleshop",
+    -- "ox_target", -- optional
 }
