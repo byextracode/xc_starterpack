@@ -6,7 +6,7 @@ function labelText(text, ...)
     if library[text] == nil then
         return ("Translation [%s][%s] does not exist"):format(Config.Locale, text)
     end
-    return library[text]:format(...) 
+    return library[text]:format(...)
 end
 
 function claimStarterPack()
@@ -27,9 +27,9 @@ function claimStarterPack()
     local vehicle = CreateVehicle(model, Config.vehicle?.coords, Config.vehicle?.heading, false, false)
     SetVehicleNumberPlateText(vehicle, plate)
     local props = ESX.Game.GetVehicleProperties(vehicle)
-    DeleteEntity(vehicle)    
+    DeleteEntity(vehicle)
     local carname = GetDisplayNameFromVehicleModel(model)
-    local vehicleName = GetLabelText(carname)   
+    local vehicleName = GetLabelText(carname)
     local data = {
         plate = plate,
         props = props,

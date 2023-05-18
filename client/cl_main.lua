@@ -24,7 +24,7 @@ CreateThread(function()
         AddTextComponentString(prop.label)
         EndTextCommandSetBlipName(blip)
     end
-    
+
     if Config.target and Config.ped then
         local heading = Config.ped.heading
         local model = type(Config.ped.model) == "number" and Config.ped.model or joaat(Config.ped.model)
@@ -34,7 +34,7 @@ CreateThread(function()
                 Wait()
             end
         end
-        
+
         local options = {
             {
                 name = "claim_starterpack",
@@ -47,7 +47,7 @@ CreateThread(function()
             },
         }
         exports["ox_target"]:addModel(model, options)
-    
+
         function point:onEnter()
             if ped == nil or not DoesEntityExist(ped) then
                 ped = CreatePed(0, model, coords.x, coords.y, coords.z - 1.0, heading, false, true)
@@ -56,13 +56,13 @@ CreateThread(function()
                 SetBlockingOfNonTemporaryEvents(ped, true)
             end
         end
-    
+
         function point:onExit()
             if DoesEntityExist(ped) then
                 DeleteEntity(ped)
             end
         end
-    
+
         function point:nearby()
             local wait = 1000
             if self.currentDistance < 2.5 then

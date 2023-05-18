@@ -47,11 +47,11 @@ RegisterServerEvent("starterpack:claim", function(data)
         local item = Config.items[i]
         xPlayer.addInventoryItem(item.name, item.count)
     end
-    
+
     if Config.log then
         SendWebhookMessage(wh_log, ("**Vehicle ownership**\n\nDetails\n```\nPlate: %s\nModel: %s\nOld owner: %s\nNew owner: %s\n```"):format(plate, label, "Starter Pack", xPlayer.identifier), nil, "Logs")
     end
-    
+
     xPlayer.triggerEvent("esx:showNotification", labelText("success"), "success")
     Wait(1000)
     if GetResourceState('xc_vehlock') == 'started' then

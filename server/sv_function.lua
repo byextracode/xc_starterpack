@@ -6,7 +6,7 @@ function labelText(text, ...)
     if library[text] == nil then
         return ("Translation [%s][%s] does not exist"):format(Config.Locale, text)
     end
-    return library[text]:format(...) 
+    return library[text]:format(...)
 end
 
 function SendWebhookMessage(webhook, text, image, title, color)
@@ -23,7 +23,7 @@ function SendWebhookMessage(webhook, text, image, title, color)
             },
         }
     }
-    
+
     if image then
         if image:find('webm') or image:find('mp4') then
             image = "https://i.imgur.com/7xZI8SN.jpg"
@@ -31,8 +31,8 @@ function SendWebhookMessage(webhook, text, image, title, color)
         connect[1]["image"] = { ["url"] = image }
     end
 
-    PerformHttpRequest(webhook, function(err, text, headers) 
-    
+    PerformHttpRequest(webhook, function(err, text, headers)
+
     end, 'POST', json.encode(
         {
             username = 'ExtraCode',
