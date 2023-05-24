@@ -7,8 +7,8 @@ Starterpack for new player on server including items and/or vehicle.
 - Configurable starterpack items.
 - Configurable starterpack car.
 
-- Preview
-Coming soon
+## Preview
+- [Preview 1](https://streamable.com/61przu)
 
 ## Framework
 - ESX
