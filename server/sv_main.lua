@@ -8,7 +8,12 @@ lib.callback.register("starterpack:configRequest", function(source)
     end
     RequestedConfig[source] = true
 
-    local table = MySQL.prepare.await("SELECT * FROM `users` WHERE identifier = ?", {GetPlayerIdentifiers(source)[1]})
+    local source = source
+    local xPlayer = ESX.GetPlayerFromId(source)
+    if not xPlayer then
+        return "error"
+    end
+    local table = MySQL.prepare.await("SELECT * FROM `users` WHERE identifier = ?", {xPlayer.identifier})
     local available = table and table.starterpack == 1
 
     return available
