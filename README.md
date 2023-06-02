@@ -17,7 +17,6 @@ Starterpack for new player on server including items and/or vehicle.
 - ESX
 - [ox_lib](https://github.com/overextended/ox_lib)
 - [oxmysql](https://github.com/overextended/oxmysql)
-- [ox_inventory](https://github.com/overextended/ox_inventory)
 - [esx_vehicleshop](https://github.com/esx-framework/esx_vehicleshop)
 
 # Legal
