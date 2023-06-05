@@ -1,14 +1,15 @@
 # xc_starterpack
 
 ## Description
-Starterpack for new player on server including items and/or vehicle. 
+Starterpack for new player on server including items and/or vehicle.
 
 ## Feature
 - Configurable starterpack items.
 - Configurable starterpack car.
 
 ## Preview
-- [Preview 1](https://streamable.com/61przu)
+- Preview
+[![Preview 1](https://i.imgur.com/nk6HjdX.png)](https://streamable.com/61przu)
 
 ## Framework
 - ESX
